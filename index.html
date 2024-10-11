@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        :root{
+
+        }
+
+        body{
+            max-width: 100%;
+            background-color: blue;
+            display: grid;
+            grid-template-rows: auto;
+            padding: 1rem;
+        }
+
+            .header-and-nav{
+                background-color: red;
+                display: grid;
+                grid-template-columns:repeat(2,1fr);
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+                header{
+                    background-color: aqua;
+                }
+
+                nav{
+                    background-color: rgb(21, 255, 0);
+                }
+
+                    .nav-list{
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    .nav-list li{
+                        background-color: rgb(255, 191, 0);
+                        align-self: flex-end;
+                    }
+
+            .home{
+                background-color: rgb(250, 250, 250);
+                height: 600px;
+            }
+
+            .latest-recipies{
+                background-color: rgb(255, 77, 0);
+                height: 600px;
+            }
+
+            .book{
+                background-color: rgb(220, 2, 129);
+                height: 600px;
+            }
+
+            .video{
+                background-color: rgb(251, 255, 0);
+                height: 600px;
+            }
+
+            .newsletter{
+                background-color: rgb(138, 138, 138);
+                height: 600px;
+            }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="header-and-nav">
+
+        <header>
+            <h1>YUM YUM</h1>
+        </header>
+    
+    
+    
+        <nav>
+            <ul class="nav-list">
+                <li>Recipes</li>
+                <li>Videos</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+    <div class="home">
+
+        <legend class="quip">our latest recipe</legend>
+        <h3>Pumpkin Pie</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, non! Voluptatum, explicabo. Consectetur voluptatum autem qui minima quasi debitis quas possimus illo ipsa molestiae ullam omnis, beatae iste eligendi optio.
+        </p>
+        <button class="seeMore-left">See more</button>
+
+    </div>
+
+
+
+    <div class="latest-recipies">
+
+        <legend class="quip"></legend>
+        <h2>Check out our latest recipes</h2>
+
+        <div class="cards">
+
+        </div>
+
+        <button class="seeMore-centered">See more</button>
+
+    </div>
+
+
+
+    <div class="book">
+
+        <legend class="quip"></legend>
+        <h2>Our book is out</h2>
+        <p></p>
+
+        <button class="seeMore-left">See more</button>
+
+        <img src="" alt="">
+
+    </div>
+
+
+
+    <div class="video">
+
+    </div>
+
+
+
+    <div class="newsletter">
+
+    </div>
+
+
+
+    <footer>
+        
+    </footer>
+
+
+
+</body>
+</html>
