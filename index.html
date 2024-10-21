@@ -1,170 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-
-        :root{
-
-        }
-
-        body{
-            max-width: 100%;
-            background-color: blue;
-            display: grid;
-            grid-template-rows: auto;
-            padding: 1rem;
-        }
-
-            .header-and-nav{
-                background-color: red;
-                display: grid;
-                grid-template-columns:repeat(2,1fr);
-                padding: 1rem;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-                header{
-                    background-color: aqua;
-                }
-
-                nav{
-                    background-color: rgb(21, 255, 0);
-                }
-
-                    .nav-list{
-                        display: flex;
-                        flex-direction: row;
-                    }
-
-                    .nav-list li{
-                        background-color: rgb(255, 191, 0);
-                        align-self: flex-end;
-                    }
-
-            .home{
-                background-color: rgb(250, 250, 250);
-                height: 600px;
-            }
-
-            .latest-recipies{
-                background-color: rgb(255, 77, 0);
-                height: 600px;
-            }
-
-            .book{
-                background-color: rgb(220, 2, 129);
-                height: 600px;
-            }
-
-            .video{
-                background-color: rgb(251, 255, 0);
-                height: 600px;
-            }
-
-            .newsletter{
-                background-color: rgb(138, 138, 138);
-                height: 600px;
-            }
-
-
-
-
-    </style>
 
 </head>
-<body>
+    <body>
+
+        <div class="head-wrapper">
+            <div class="fix-width">
+                <div class="head-content">
+                    <header>
+                        <h1>
+                            YUM&YUM
+                        </h1>
+                    </header>
     
-    <div class="header-and-nav">
-
-        <header>
-            <h1>YUM YUM</h1>
-        </header>
-    
-    
-    
-        <nav>
-            <ul class="nav-list">
-                <li>Recipes</li>
-                <li>Videos</li>
-                <li>About Us</li>
-            </ul>
-        </nav>
-
-    </div>
-
-
-
-    <div class="home">
-
-        <legend class="quip">our latest recipe</legend>
-        <h3>Pumpkin Pie</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, non! Voluptatum, explicabo. Consectetur voluptatum autem qui minima quasi debitis quas possimus illo ipsa molestiae ullam omnis, beatae iste eligendi optio.
-        </p>
-        <button class="seeMore-left">See more</button>
-
-    </div>
-
-
-
-    <div class="latest-recipies">
-
-        <legend class="quip"></legend>
-        <h2>Check out our latest recipes</h2>
-
-        <div class="cards">
-
+                    <nav>
+                        <ul>
+                            <li><a href="">Recipes</a></li>
+                            <li><a href="">Videos</a></li>
+                            <li><a href="">About us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-
-        <button class="seeMore-centered">See more</button>
-
-    </div>
-
-
-
-    <div class="book">
-
-        <legend class="quip"></legend>
-        <h2>Our book is out</h2>
-        <p></p>
-
-        <button class="seeMore-left">See more</button>
-
-        <img src="" alt="">
-
-    </div>
-
-
-
-    <div class="video">
-
-    </div>
-
-
-
-    <div class="newsletter">
-
-    </div>
-
-
-
-    <footer>
         
-    </footer>
+        <main id="efni" class="wrapper-main">
+            <div class="wrapper">
+
+                <div class="content-wrapper" id="home-home">
+                    <div class="fix-width">
+                        <div class="content-split">
+                            <div class="content">
+                                <div class="text-setup" id="home-home-text">
+                                    <legend>
+                                        Our latest recipe
+                                    </legend>
+                                    <h3>
+                                        Pumpkin pie
+                                    </h3>
+                                    <p>
+                                        Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                                        The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
+                                    </p>
+                                    <div class="button-wrapper">
+                                        <button class="see-more">See more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="image-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-</body>
+                <div class="content-wrapper" id="home-latest-recipies">
+                    <div class="fix-width">
+                        <div class="content">
+                            <div class="text-setup">
+                                <legend>get ready to get busy</legend>
+                                <h2>Check out our latest recipes</h2>
+                            </div>
+                            <div class="cards">
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src=""  alt="image of lax sushi rolls" id="lax-sushi">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Lax sushi rolls</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src=""  alt="image of milk cookies" id="milk-cookies">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Milk cookies</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="" alt="image of banana cake" id="banana-cake">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Banana cake</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="" alt="image of cube cake" id="cube-cake">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Cube cake</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="" alt="image of lax sushi rolls" id="lax-sushi">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Lax sushi rolls</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="" alt="image of almond cookies" id="almond-cookies">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Almond cookies</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="button-wrapper centered">
+                                <button class="see-more">See more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-wrapper" id="home-book">
+                    <div class="fix-width">
+                        <div class="center">
+                            <div class="content-split" id="home-book-split">
+                                <div id="home-book-text">
+                                    <div class="text-setup">
+                                        <legend>Announcement time</legend>
+                                        <h3>Our book is out</h3>
+                                        <p>Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                                            The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during 
+                                            the fall and early winter.
+                                        </p>
+                                        <div class="button-wrapper">
+                                            <button class="see-more">See more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="home-book-image">
+                                    <div class="image-wrapper">
+                                        <img src="/images/magazine.png" alt="" id="magazine">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-wrapper" id="home-video">
+                    <div class="fix-width">
+                        <div class="content">
+                            <div class="text-setup">
+                                <legend>get ready to get busy</legend>
+                                <h2>Check out our latest recipes</h2>
+                            </div>
+                            <div class="cards">
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src=""  alt="image of lax sushi rolls" id="lax-sushi">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Lax sushi rolls</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src=""  alt="image of milk cookies" id="milk-cookies">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Milk cookies</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="" alt="image of banana cake" id="banana-cake">
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="carrd-info">
+                                            <p>September</p>
+                                            <h4>Banana cake</h4>
+                                        </div>
+                                        <a href="" class="read-more">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-wrapper centered">
+                                <button class="see-more">See more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-wrapper newsletter-wrapper" id="home-newsletter">
+                    <div class="fix-width">
+                        <div class="content-row">
+                            <div class="text-setup">
+                                <legend>Craving more</legend>
+                                <h2>Subscribe to our newsletter</h2>
+                            </div>
+                            <div class="text-setup">
+                                <legend>Email</legend>
+                                <input type="email" placeholder="email@example.com">
+                            </div>
+                            <button class="subscribe">Subscribe now</button>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="content-wrapper footer-wrapper" id="home-footer">
+                    <div class="center">
+                        <div class="content footer-content">
+                            <h5>Come and join us for more recipes</h5>
+                            <div class="socials">
+                                <div class="icon">
+                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                </div>
+                                <div class="icon">
+                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                </div>
+                            </div>
+                            <div class="yamyam">
+                                <a href="">yamyam.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </body>
 </html>
