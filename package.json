@@ -13,7 +13,7 @@
     "stylelint-config-standard": "^36.0.1"
   },
   "scripts": {
-    "dev": "echo \"Error: no test specified\" && exit 1"
+    "dev": "browser-sync start --server --files index.html"
   },
   "author": "",
   "license": "ISC",
