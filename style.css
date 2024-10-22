@@ -229,7 +229,6 @@ html {
         margin-top: 30px;
         display: flex;
         align-items: center;
-
     }
 
     .centered{
@@ -257,13 +256,18 @@ html {
     margin-right: -50%;
     }
 
-    .see-more{
+    .see-more {
         width: 250px;
         height: 52px;
         background: none ;
         border: 2px solid var(--tan-text-color);
         color: var(--tan-text-color);
         text-align: center;
+    }
+
+    .see-more:hover {
+        background-color: var(--tan-text-color);
+        color: var(--background-color);
     }
     
     .newsletter-wrapper{
