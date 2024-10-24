@@ -1,6 +1,6 @@
 Verkefnið skal vera keyrt með npm run dev
 
-Allar síður nema index.html eru geymdar í "pages" möppunni, allar css skrár og sass skáin eru geymd í styles möppunni.
+Allar síður nema index.html eru geymdar í "pages" möppunni, allar css skrár og sass skáin eru geymd í styles möppunni. Stylelint hefur verið notað til að laga allar villur í styles skránum.
 
 
 Liam DiFiore,
