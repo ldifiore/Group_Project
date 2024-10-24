@@ -434,7 +434,12 @@ html {
         color: var(--paragraph-color);
     }
 
-    legend{
+    .quip{
+        color: var(--tan-text-color);
+        font-size: 16px;
+    }
+
+    label{
         color: var(--tan-text-color);
         font-size: 16px;
     }
@@ -515,4 +520,8 @@ html {
     .ingredient-number{
         color: var(--tan-text-color);
         font-size: 36px;
+    }
+
+    #video-checkbox-label{
+        color: var(--color-black);
     }
