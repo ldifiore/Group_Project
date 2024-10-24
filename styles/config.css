@@ -482,6 +482,19 @@ input[type="email"]:focus {
   place-content: center center;
 }
 
+.icon img {
+  margin: auto;
+}
+
+.yamyam {
+  text-align: center;
+}
+
+.yamyam a {
+  text-decoration: none;
+  color:var(--second-title-color);
+}
+
 .content-recipe {
   display: flex;
   flex-direction: row;
