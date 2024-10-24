@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
+
 *::before, *::after {
   box-sizing: inherit;
 }
@@ -14,17 +16,17 @@ html {
 }
 
 :root {
-  --background-color:rgb(255, 255, 255);
-  --tan-background-color:rgb(247, 241, 235);
-  --grey-background-color:rgb(250, 250, 250);
-  --newsletter-background-color:rgb(0, 0, 0);
-  --main-title-color:rgb(0, 0, 0);
-  --second-title-color:rgb(137, 137, 137);
-  --paragraph-color:rgb(94, 91, 105);
-  --tan-text-color:rgb(227, 205, 177);
-  --nav-color:rgb(38, 38, 38);
-  --see-more-line-color:rgb(231, 231, 231);
-  --color-black:rgb(0, 0, 0);
+  --background-color:rgb(255 255 255);
+  --tan-background-color:rgb(247 241 235);
+  --grey-background-color:rgb(250 250 250);
+  --newsletter-background-color:rgb(0 0 0);
+  --main-title-color:rgb(0 0 0);
+  --second-title-color:rgb(137 137 137);
+  --paragraph-color:rgb(94 91 105);
+  --tan-text-color:rgb(227 205 177);
+  --nav-color:rgb(38 38 38);
+  --see-more-line-color:rgb(231 231 231);
+  --color-black:rgb(0 0 0);
   --header-height:80px;
   --grey-split-background-height:300px;
   --font-family-base:"Poppins", arial, helvetica, sans-serif;
@@ -58,10 +60,12 @@ label, legend, p, a {
   .fix-width {
     width: 860px;
   }
+
   .card {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 body {
   max-width: 100%;
 }
@@ -79,20 +83,19 @@ body {
   padding-bottom: 60px;
 }
 
-.head-wrapper .fix-width {
-  align-content: center;
-}
-
 .fix-width {
   width: 1290px;
   justify-content: center;
 }
 
+.head-wrapper .fix-width {
+  align-content: center;
+}
+
 .head-wrapper {
   background-color: var(--background-color);
   display: flex;
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
   height: 80px;
   position: sticky;
   z-index: 1;
@@ -102,8 +105,7 @@ body {
 .head-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
+  place-content: center space-between;
 }
 
 header {
@@ -122,6 +124,7 @@ h1 {
 nav {
   align-content: center;
 }
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +185,6 @@ li a {
 }
 
 #recipe-wrapper {
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -201,8 +203,7 @@ li a {
 }
 
 .content {
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
 }
 
 .center {
@@ -211,8 +212,7 @@ li a {
 }
 
 .content-row {
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -286,6 +286,7 @@ li a {
 .centered {
   justify-content: center;
 }
+
 .centered::before, .centered::after {
   background-color: var(--see-more-line-color);
   content: "";
@@ -295,10 +296,12 @@ li a {
   vertical-align: middle;
   width: calc(50% - 125px - 80px);
 }
+
 .centered::before {
   right: 80px;
   margin-left: -50%;
 }
+
 .centered::after {
   left: 80px;
   margin-right: -50%;
@@ -312,10 +315,12 @@ li a {
   color: var(--tan-text-color);
   text-align: center;
 }
+
 .see-more a {
   color: var(--tan-text-color);
   text-decoration: none;
 }
+
 .see-more:hover {
   background-color: var(--tan-text-color);
   color: var(--background-color);
@@ -326,9 +331,11 @@ li a {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
 .newsletter-wrapper .content-row {
   justify-content: space-between;
 }
+
 .newsletter-wrapper h2 {
   color: var(--background-color);
 }
@@ -341,25 +348,25 @@ li a {
   color: var(--tan-text-color);
   text-align: center;
 }
+
 .subscribe:hover {
   background-color: var(--tan-text-color);
   color: var(--newsletter-background-color);
 }
 
-input[type=email] {
+input[type="email"] {
   background: none;
   border: none;
   border-bottom: 1px solid var(--tan-text-color);
   font-size: 22px;
   color: var(--background-color);
 }
-input[type=email]::-moz-placeholder {
+
+input[type="email"]::placeholder {
   color: var(--background-color);
 }
-input[type=email]::placeholder {
-  color: var(--background-color);
-}
-input[type=email]:focus {
+
+input[type="email"]:focus {
   outline: none;
 }
 
@@ -367,7 +374,7 @@ input[type=email]:focus {
   position: relative;
   left: 50%;
   top: -85%;
-  filter: drop-shadow(-100px 2px 74px rgba(0, 0, 0, 0.2784313725));
+  filter: drop-shadow(-100px 2px 74px rgb(0 0 0 / 27.8%));
 }
 
 .img-lax-sushi {
@@ -406,7 +413,7 @@ input[type=email]:focus {
   position: relative;
   width: 409px;
   height: 290px;
-  gap: 0px;
+  gap: 0;
 }
 
 .img-pie-card {
@@ -435,14 +442,14 @@ input[type=email]:focus {
   width: 1009.25px;
   height: 690.14px;
   top: -88px;
-  right: 0px;
-  gap: 0px;
+  right: 0;
+  gap: 0;
 }
 
 #magazine {
   position: relative;
   width: 440px;
-  box-shadow: -20px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: -20px 15px rgb(0 0 0 / 5%);
 }
 
 .quip, label {
@@ -457,8 +464,7 @@ input[type=email]:focus {
 .footer-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
 }
 
 .socials {
@@ -473,8 +479,7 @@ input[type=email]:focus {
   border: 1px solid var(--tan-text-color);
   border-radius: 50%;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  place-content: center center;
 }
 
 .content-recipe {
@@ -482,12 +487,14 @@ input[type=email]:focus {
   flex-direction: row;
   gap: 176px;
 }
+
 .content-recipe .text-setup {
   gap: 40px;
 }
+
 .content-recipe h3 {
   font-size: 40px;
-  color: rgb(208, 208, 208);
+  color: rgb(208 208 208);
 }
 
 .recipe-info {
@@ -500,6 +507,7 @@ input[type=email]:focus {
   grid-auto-rows: auto;
   gap: 40px;
 }
+
 .ingredients p {
   color: var(--color-black);
 }
@@ -514,9 +522,10 @@ input[type=email]:focus {
   display: inline-flex;
   gap: 50px;
 }
+
 .ingredient p {
   align-self: center;
-  color: rgb(155, 155, 155);
+  color: rgb(155 155 155);
 }
 
 .ingredient-number {
@@ -526,4 +535,4 @@ input[type=email]:focus {
 
 #video-checkbox-label {
   color: var(--color-black);
-}/*# sourceMappingURL=config.css.map */
+}

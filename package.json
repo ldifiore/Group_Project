@@ -2,18 +2,19 @@
   "dependencies": {
     "browser-sync": "^3.0.3",
     "concurrently": "^9.0.1",
-    "sass": "^1.79.4",
-    "stylelint-config-sass-guidelines": "^12.1.0"
+    "sass": "^1.79.4"
   },
   "name": "group_project",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
     "stylelint": "^16.9.0",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-sass-guidelines": "^12.1.0"
   },
   "scripts": {
-    "dev": "browser-sync start --server --files index.html"
+    "dev": "browser-sync start --server --files index.html",
+    "lint": "stylelint '**/*.{css,sass}'"
   },
   "author": "",
   "license": "ISC",

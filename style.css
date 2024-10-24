@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -6,6 +7,7 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 *::before, *::after {
   box-sizing: inherit;
 }
@@ -16,22 +18,19 @@ html {
 }
 
     :root{
-        --background-color: rgb(255, 255, 255);
-        --tan-background-color:rgb(247, 241, 235);
-        --grey-background-color: rgb(250, 250, 250);
-        --newsletter-background-color:rgb(0, 0, 0);
-        --main-title-color:rgb(0, 0, 0);
-        --second-title-color:rgb(137, 137, 137);
-        --paragraph-color:rgb(94, 91, 105);
-        --tan-text-color: rgb(227, 205, 177);
-        --nav-color: rgb(38, 38, 38);
-        --see-more-line-color: rgb(231, 231, 231);
-
-        --color-black:rgb(0,0,0);
-
+        --background-color: rgb(255 255 255);
+        --tan-background-color:rgb(247 241 235);
+        --grey-background-color: rgb(250 250 250);
+        --newsletter-background-color:rgb(0 0 0);
+        --main-title-color:rgb(0 0 0);
+        --second-title-color:rgb(137 137 137);
+        --paragraph-color:rgb(94 91 105);
+        --tan-text-color: rgb(227 205 177);
+        --nav-color: rgb(38 38 38);
+        --see-more-line-color: rgb(231 231 231);
+        --color-black:rgb(0 0 0);
         --header-height:80px;
         --grey-split-background-height:300px;
-
         --font-family-base: "Poppins", arial, helvetica, sans-serif;
         --font-family-heading: "Playfair", "Comic Sans MS", cursive;
     }
@@ -86,20 +85,19 @@ html {
         padding-bottom: 60px;
     }
 
-    .head-wrapper .fix-width{
-        align-content: center;
-    }
-
     .fix-width{
         width: 1290px;
         justify-content: center;
     }
 
+    .head-wrapper .fix-width{
+        align-content: center;
+    }
+
     .head-wrapper{
         background-color: var(--background-color);
         display: flex;
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
         height: 80px;
         position: sticky;
         z-index: 1;
@@ -111,12 +109,10 @@ html {
     .head-content{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-content: center;
+        place-content: center space-between;
     }
 
     header{
-
         align-content: center;        
     }
 
@@ -246,8 +242,7 @@ html {
     }
 
     .content{
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
     }
 
     .center{
@@ -256,8 +251,7 @@ html {
     }
 
     .content-row{
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
         display: flex;
         flex-direction: row;
         align-items: end;
@@ -305,20 +299,14 @@ html {
         display: grid;
         grid-auto-rows: auto;
         grid-template-columns: repeat(3,minmax(0,1fr));
-
         gap: 2rem;
     }
 
     .card{
         background-color: var(--background-color);
     }
-    
-    .carrd-info{
-
-    }
 
     .card-text{
-
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -389,7 +377,6 @@ html {
     }
     
     .newsletter-wrapper{
-
         background-color: var(--newsletter-background-color);
         padding-top: 100px;
         padding-bottom: 100px;
@@ -418,7 +405,7 @@ html {
         color: var(--newsletter-background-color);
     }
 
-    input[type=email]{
+    input[type="email"]{
         background: none;
         border: none; 
         border-bottom: 1px solid var(--tan-text-color);
@@ -428,16 +415,12 @@ html {
 
     }
     
-    input[type=email]::placeholder{
+    input[type="email"]::placeholder{
         color: var(--background-color);
     }
 
-    input[type=email]:focus {
+    input[type="email"]:focus {
         outline: none; 
-    }
-
-    footer{
-
     }
 
     .img-pie{
@@ -487,7 +470,7 @@ html {
         position: relative;
         width: 409px;
         height: 290px;
-        gap: 0px;
+        gap: 0;
     }
 
     .img-pie-card{
@@ -519,8 +502,8 @@ html {
         width: 1009.25px;
         height: 690.14px;
         top: -88px;
-        right: 0px;
-        gap: 0px;
+        right: 0;
+        gap: 0;
 
 
     }
@@ -528,7 +511,7 @@ html {
     #magazine{
         position: relative;
         width: 440px;
-        box-shadow: -20px 15px  rgba(0, 0, 0, 0.05) ;
+        box-shadow: -20px 15px  rgb(0 0 0 / 5%) ;
     }
 
     
@@ -551,8 +534,7 @@ html {
     .footer-content{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
     }
 
     .socials{
@@ -567,8 +549,7 @@ html {
         border: 1px solid var(--tan-text-color);
         border-radius: 50%;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
     }
 
     .content-recipe{
@@ -583,7 +564,7 @@ html {
 
     .content-recipe h3{
         font-size: 40px;
-        color: rgb(208, 208, 208);
+        color: rgb(208 208 208);
     }
 
     .recipe-info{
@@ -615,7 +596,7 @@ html {
 
     .ingredient p{
         align-self:center;
-        color:rgb(155, 155, 155);
+        color:rgb(155 155 155);
     }
 
     .ingredient-number{
