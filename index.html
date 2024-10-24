@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yum&yum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles/config.css">
 
@@ -19,13 +20,26 @@
                         <a href="/index.html" class="yum-yum"><h1>yum&yum</h1></a>
                     </header>
     
-                    <nav>
+                    <nav class="hide-2">
                         <ul>
                             <li><a href="/pages/lastestRecipes.html">Recipes</a></li>
                             <li><a href="/pages/video.html">Videos</a></li>
                             <li><a href="#home-footer">About us</a></li>
                         </ul>
                     </nav>
+                    <div class="topnav show-2">
+                        <a href="#home" class="active"></a>
+                        <!-- Navigation links (hidden by default) -->
+                        <div id="myLinks">
+                          <a href="/pages/lastestRecipes.html"><h4>Recipes</h4></a>
+                          <a href="/pages/video.html"><h4>Videos</h4></a>
+                          <a href="#home-footer"><h4>About us</h4></a>
+                        </div>
+                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="burger-icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,7 +48,7 @@
             <div class="wrapper">
 
                 <div class="content-wrapper" id="home-home">
-                    <div class="fix-width">
+                    <div class="fix-width" id="home-home-fix-width">
                             <div class="content">
                                 <div class="text-setup" id="home-home-text">
                                     <p class="quip">
@@ -43,7 +57,7 @@
                                     <h3>
                                         Pumpkin pie
                                     </h3>
-                                    <p>
+                                    <p class="hide-2">
                                         Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
                                         The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
                                     </p>
@@ -111,7 +125,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card hide-2">
                                     <div class="card-image">
                                         <img src="img/cubecakes.png" alt="image of cube cake" class="img-cube-cake">
                                     </div>
@@ -124,7 +138,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card hide-2">
                                     <div class="card-image">
                                         <img src="/img/sushi.png" alt="image of lax sushi rolls" class="img-lax-sushi">
                                     </div>
@@ -137,7 +151,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card hide-2">
                                     <div class="card-image">
                                         <img src="img/almondcookies.png" alt="image of almond cookies" class="img-almond-cookies">
                                     </div>
@@ -168,11 +182,12 @@
                                     <div class="text-setup">
                                         <p class="quip">Announcement time</p>
                                         <h3>Our book is out</h3>
-                                        <p>Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                                        <p class="hide-2">Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
                                             The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during 
                                             the fall and early winter.
                                         </p>
-                                        <div class="button-wrapper">
+                                        <p class="show-2">As you pour the first glass of your favorite Chianti or Chardonnay</p>
+                                        <div class="button-wrapper" id="home-book-see-more">
                                             <form action="#">
                                                 <button class="see-more">See more</button>
                                             </form>
@@ -182,7 +197,7 @@
                                 
                                 <div id="home-book-image">
                                     <div class="image-wrapper">
-                                        <img src="/img/book.png" alt="" id="magazine">
+                                        <img src="/img/book.png" alt="image of magazine" id="magazine">
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +240,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card hide-2">
                                     <div class="card-image">
                                         <img src="img/bananacake.png" alt="image of banana cake" class="img-banana-cake">
                                     </div>
@@ -283,11 +298,21 @@
                             <div class="yamyam">
                                 <a href="">yamyam.com</a>
                             </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
             
         </main>
     </body>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+            }
+          }
+        </script>
 </html>

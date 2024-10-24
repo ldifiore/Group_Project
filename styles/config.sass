@@ -1,6 +1,4 @@
-@charset "UTF-8"
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
 
 *
   margin: 0
@@ -15,17 +13,17 @@ html
   position: relative
 
 \:root
-  --background-color:rgb(255, 255, 255)
-  --tan-background-color:rgb(247, 241, 235)
-  --grey-background-color:rgb(250, 250, 250)
-  --newsletter-background-color:rgb(0, 0, 0)
-  --main-title-color:rgb(0, 0, 0)
-  --second-title-color:rgb(137, 137, 137)
-  --paragraph-color:rgb(94, 91, 105)
-  --tan-text-color:rgb(227, 205, 177)
-  --nav-color:rgb(38, 38, 38)
-  --see-more-line-color:rgb(231, 231, 231)
-  --color-black:rgb(0, 0, 0)
+  --background-color:rgb(255 255 255)
+  --tan-background-color:rgb(247 241 235)
+  --grey-background-color:rgb(250 250 250)
+  --newsletter-background-color:rgb(0 0 0)
+  --main-title-color:rgb(0 0 0)
+  --second-title-color:rgb(137 137 137)
+  --paragraph-color:rgb(94 91 105)
+  --tan-text-color:rgb(227 205 177)
+  --nav-color:rgb(38 38 38)
+  --see-more-line-color:rgb(231 231 231)
+  --color-black:rgb(0 0 0)
   --header-height:80px
   --grey-split-background-height:300px
   --font-family-base:"Poppins", arial, helvetica, sans-serif
@@ -49,13 +47,6 @@ h1, h2, h3, h4, h5
 label, legend, p, a
   font-family: var(--font-family-base)
 
-@media (width <= 1400px)
-  .fix-width
-    width: 860px
-
-  .card
-    grid-template-columns: repeat(2, 1fr)
-
 body
   max-width: 100%
 
@@ -70,28 +61,26 @@ body
   padding-top: 60px
   padding-bottom: 60px
 
-.head-wrapper .fix-width
-  align-content: center
-
 .fix-width
   width: 1290px
   justify-content: center
 
 .head-wrapper
+  .fix-width
+    align-content: center
+
   background-color: var(--background-color)
   display: flex
-  justify-content: center
-  align-content: center
+  place-content: center center
   height: 80px
   position: sticky
-  z-index: 1
+  z-index: 100
   top: 0
 
 .head-content
   display: flex
   flex-direction: row
-  justify-content: space-between
-  align-content: center
+  place-content: center space-between
 
 header
   align-content: center
@@ -146,6 +135,13 @@ li a
 #video-video
   height: 650px
   overflow: hidden
+  background-color: var(--color-black)
+
+  h3
+    color: var(--background-color)
+
+  p
+    color: var(--second-title-color)
 
 .video-video-fix-width
   width: 100%
@@ -158,7 +154,6 @@ li a
   width: fit-content
 
 #video-video-text
-  z-index: 1
   margin-top: 100px
   width: 550px
 
@@ -169,19 +164,18 @@ li a
   background: linear-gradient(to bottom, var(--background-color) var(--grey-split-background-height), var(--grey-background-color) var(--grey-split-background-height))
 
 .content
-  justify-content: center
-  align-content: center
+  place-content: center center
 
 .center
   display: flex
   justify-content: center
 
 .content-row
-  justify-content: center
-  align-content: center
+  place-content: center center
   display: flex
   flex-direction: row
-  align-items: end
+  align-items: center
+  justify-content: space-between
 
 #home-home-text
   margin-top: 100px
@@ -192,7 +186,6 @@ li a
   justify-self: start
 
 #home-book-image
-  justify-self: end
 
 .content-split
   display: grid
@@ -203,6 +196,8 @@ li a
   width: 1100px
 
 .text-setup
+  position: relative
+  z-index: 1
   display: flex
   flex-direction: column
   gap: 21px
@@ -215,8 +210,6 @@ li a
 
 .card
   background-color: var(--background-color)
-
-.carrd-info
 
 .card-text
   display: flex
@@ -236,7 +229,7 @@ li a
 .button-wrapper
   margin-top: 30px
   display: flex
-  align-items: center
+  justify-content: center
 
 .centered
   justify-content: center
@@ -279,9 +272,6 @@ li a
   padding-top: 100px
   padding-bottom: 100px
 
-  .content-row
-    justify-content: space-between
-
   h2
     color: var(--background-color)
 
@@ -297,7 +287,7 @@ li a
     background-color: var(--tan-text-color)
     color: var(--newsletter-background-color)
 
-input[type=email]
+input[type="email"]
   background: none
   border: none
   border-bottom: 1px solid var(--tan-text-color)
@@ -310,13 +300,11 @@ input[type=email]
   &:focus
     outline: none
 
-footer
-
 .img-pie
   position: relative
   left: 50%
   top: -85%
-  filter: drop-shadow((-100px) 2px 74px #00000047)
+  filter: drop-shadow((-100px) 2px 74px rgb(0 0 0 / 27.8%))
 
 .img-lax-sushi
   position: relative
@@ -374,14 +362,14 @@ footer
   position: relative
   width: 1009.25px
   height: 690.14px
-  top: -88px
-  right: 0
-  gap: 0
+  top: -458px
+  right: -441px
+  box-shadow: inset 100px 0px 1000px 0px rgb(0, 0, 0)
 
 #magazine
   position: relative
   width: 440px
-  box-shadow: -20px 15px rgba(0, 0, 0, 0.05)
+  box-shadow: -20px 15px rgb(0 0 0 / 5%)
 
 .quip, label
   color: var(--tan-text-color)
@@ -393,8 +381,7 @@ footer
 .footer-content
   display: flex
   flex-direction: column
-  justify-content: center
-  align-content: center
+  place-content: center center
 
 .socials
   display: flex
@@ -407,8 +394,17 @@ footer
   border: 1px solid var(--tan-text-color)
   border-radius: 50%
   display: flex
-  justify-content: center
-  align-content: center
+  place-content: center center
+
+  img
+    margin: auto
+
+.yamyam
+  text-align: center
+
+  a
+    text-decoration: none
+    color: var(--second-title-color)
 
 .content-recipe
   display: flex
@@ -420,7 +416,7 @@ footer
 
   h3
     font-size: 40px
-    color: rgb(208, 208, 208)
+    color: rgb(208 208 208)
 
 .recipe-info
   display: inline-flex
@@ -445,11 +441,235 @@ footer
 
   p
     align-self: center
-    color: rgb(155, 155, 155)
+    color: rgb(155 155 155)
 
 .ingredient-number
   color: var(--tan-text-color)
   font-size: 36px
+  font-weight: 800
 
 #video-checkbox-label
   color: var(--color-black)
+
+.topnav
+  overflow: hidden
+  position: relative
+
+  #myLinks
+    display: none
+    background-color: var(--grey-background-color)
+
+  a
+    color: var(--color-black)
+    padding: 14px 16px
+    text-decoration: none
+    font-size: 17px
+    display: block
+
+    &.burger-icon
+      position: relative
+      color: var(--color-black)
+      background: none
+      display: block
+      position: absolute
+      right: 0
+      top: -10px
+
+    &:hover
+
+/* Hide the links inside the navigation menu (except for logo/home)
+
+/* Style navigation menu links
+
+/* Style the hamburger menu
+
+/* Add a grey background color on mouse-over
+
+/* Style the active link (or home/logo)
+
+.active
+  background-color: none
+
+@media only screen and (min-width: 1px) and (max-width: 500px)
+  .fix-width
+    width: 270px
+
+  .cards
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+
+  .content-recipe
+    flex-direction: column
+
+  .content-row
+    flex-direction: column
+    row-gap: 20px
+
+  #home-home-text
+    width: 270px
+    justify-content: center
+    text-align: center
+
+  .img-pie
+    scale: 80%
+    position: relative
+    left: -168px
+    top: -452px
+
+  #home-book-split
+    margin-top: 100px
+    width: 270px
+    display: flex
+    gap: 50px
+    flex-direction: column
+
+  #home-book-text
+    width: 270px
+    text-align: center
+
+  #magazine
+    width: 270px
+
+  #home-book-see-more
+    justify-content: center
+
+  .recipe-icons
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+  h1
+    font-size: 17px
+
+  h2
+    font-size: 32px
+
+  h3
+    font-size: 20px
+
+  h4
+    font-size: 18px
+
+  h3
+    font-size: 60px
+    font-size: 60px
+
+  p
+    font-size: 12px
+
+  .hide-1, .hide-2, .hide-3
+    display: none
+
+@media only screen and (min-width: 501px) and (max-width: 900px)
+  .fix-width
+    width: 408px
+
+  .cards
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+
+  .content-recipe
+    flex-direction: column
+
+  .content-row
+    flex-direction: column
+    row-gap: 20px
+
+  #home-home-text
+    width: 400px
+    justify-content: center
+    text-align: center
+
+  .img-pie
+    scale: 90%
+    position: relative
+    left: -52px
+    top: -433px
+
+  #home-book-split
+    margin-top: 100px
+    width: 450px
+    display: flex
+    gap: 50px
+    flex-direction: column
+
+  #home-book-text
+    width: 450px
+    text-align: center
+
+  #home-book-see-more
+    justify-content: center
+
+  .recipe-icons
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+  h1
+    font-size: 17px
+
+  h2
+    font-size: 32px
+
+  h3
+    font-size: 20px
+
+  h4
+    font-size: 18px
+
+  h3
+    font-size: 60px
+    font-size: 60px
+
+  p
+    font-size: 12px
+
+  .hide-1, .hide-2, .show-3
+    display: none
+
+@media only screen and (min-width: 901px) and (max-width: 1400px)
+  .fix-width
+    width: 848px
+
+  .cards
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  .content-row
+    flex-direction: column
+    row-gap: 20px
+
+  #home-home-fix-width
+
+  #home-home-text
+    width: 400px
+
+  #home-book-split
+    margin-top: 100px
+    width: 500px
+    display: flex
+    gap: 50px
+    flex-direction: column
+
+  #home-book-text
+    width: 450px
+    text-align: center
+
+  #home-book-see-more
+    justify-content: center
+
+  .img-pie
+    scale: 90%
+    position: relative
+    left: 296px
+    top: -688px
+
+  .hide-1, .show-2, .show-3
+    display: none
+
+@media only screen and (min-width: 1401px) and (max-width: 5000px)
+  .fix-width
+    width: 1290px
+
+  .cards
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+
+  .show-1, .show-2, .show-3
+    display: none

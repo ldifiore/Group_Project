@@ -56,16 +56,6 @@ label, legend, p, a {
   font-family: var(--font-family-base);
 }
 
-@media (width <= 1400px) {
-  .fix-width {
-    width: 860px;
-  }
-
-  .card {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 body {
   max-width: 100%;
 }
@@ -98,7 +88,7 @@ body {
   place-content: center center;
   height: 80px;
   position: sticky;
-  z-index: 1;
+  z-index: 100;
   top: 0;
 }
 
@@ -174,6 +164,15 @@ li a {
 #video-video {
   height: 650px;
   overflow: hidden;
+  background-color: var(--color-black);
+}
+
+#video-video h3{
+  color: var(--background-color);
+}
+
+#video-video p{
+  color: var(--second-title-color);
 }
 
 .video-video-fix-width {
@@ -189,7 +188,6 @@ li a {
 }
 
 #video-video-text {
-  z-index: 1;
   margin-top: 100px;
   width: 550px;
 }
@@ -215,7 +213,8 @@ li a {
   place-content: center center;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #home-home-text {
@@ -229,7 +228,6 @@ li a {
 }
 
 #home-book-image {
-  justify-self: end;
 }
 
 .content-split {
@@ -243,6 +241,8 @@ li a {
 }
 
 .text-setup {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -280,7 +280,7 @@ li a {
 .button-wrapper {
   margin-top: 30px;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .centered {
@@ -332,9 +332,6 @@ li a {
   padding-bottom: 100px;
 }
 
-.newsletter-wrapper .content-row {
-  justify-content: space-between;
-}
 
 .newsletter-wrapper h2 {
   color: var(--background-color);
@@ -441,9 +438,9 @@ input[type="email"]:focus {
   position: relative;
   width: 1009.25px;
   height: 690.14px;
-  top: -88px;
-  right: 0;
-  gap: 0;
+  top: -458px;
+  right: -441px;
+  box-shadow: inset 100px 0px 1000px 0px rgb(0, 0, 0);
 }
 
 #magazine {
@@ -544,8 +541,259 @@ input[type="email"]:focus {
 .ingredient-number {
   color: var(--tan-text-color);
   font-size: 36px;
+  font-weight: 800;
 }
 
 #video-checkbox-label {
   color: var(--color-black);
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+  background-color: var(--grey-background-color);
+
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: var(--color-black);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.burger-icon {
+  position: relative;
+  color: var(--color-black);
+  background: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: none;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 500px) {
+  .fix-width{
+    width: 270px;
+}
+.cards{
+    grid-template-columns: repeat(1,minmax(0,1fr));
+}
+.content-recipe{
+  flex-direction: column;
+}
+.content-row{
+  flex-direction: column;
+  row-gap: 20px;   
+}
+#home-home-text {
+  width: 270px;
+  justify-content: center;
+  text-align: center;
+}
+.img-pie {
+  scale: 80%;
+  position: relative;
+  left: -168px;
+  top: -452px;
+}
+#home-book-split {
+  margin-top: 100px;
+  width: 270px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+#home-book-text {
+  width: 270px;
+  text-align: center;
+}
+#magazine {
+  width: 270px;
+}
+#home-book-see-more{
+  justify-content: center;
+}
+.recipe-icons{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+h1 {font-size: 17px;}
+h2 {font-size: 32px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+h3 {font-size: 60px;}
+h3 {font-size: 60px;}
+p {font-size: 12px;}
+
+.hide-1{
+  display: none;
+}
+.hide-2{
+  display: none;
+}
+.hide-3{
+  display: none;
+}
+}
+
+
+
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+  .fix-width{
+      width: 408px;
+  }
+  .cards{
+      grid-template-columns: repeat(1,minmax(0,1fr));
+  }
+  .content-recipe{
+    flex-direction: column;
+  }
+  .content-row{
+    flex-direction: column;
+    row-gap: 20px;   
+  }
+  #home-home-text {
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+  }
+  .img-pie {
+    scale: 90%;
+    position: relative;
+    left: -52px;
+    top: -433px;
+  }
+  #home-book-split {
+    margin-top: 100px;
+    width: 450px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+  }
+  #home-book-text {
+    width: 450px;
+    text-align: center;
+  }
+  #home-book-see-more{
+    justify-content: center;
+  }
+  .recipe-icons{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+  }
+  
+
+  h1 {font-size: 17px;}
+  h2 {font-size: 32px;}
+  h3 {font-size: 20px;}
+  h4 {font-size: 18px;}
+  h3 {font-size: 60px;}
+  h3 {font-size: 60px;}
+  p {font-size: 12px;}
+
+  .hide-1{
+    display: none;
+  }
+  .hide-2{
+    display: none;
+  }
+  .show-3{
+    display: none;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 901px) and (max-width: 1400px) {
+  .fix-width{
+      width: 848px;
+  }
+  .cards{
+      grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .content-row{
+    flex-direction: column;
+    row-gap: 20px;   
+  }
+  #home-home-fix-width{
+
+  }
+  #home-home-text {
+    width: 400px;
+  }
+  #home-book-split {
+    margin-top: 100px;
+    width: 500px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+  }
+  #home-book-text {
+    width: 450px;
+    text-align: center;
+  }
+  #home-book-see-more{
+    justify-content: center;
+  }
+  .img-pie {
+    scale: 90%;
+    position: relative;
+    left: 296px;
+    top: -688px;
+  }
+  .hide-1{
+    display: none;
+  }
+  .show-2{
+    display: none;
+  }
+  .show-3{
+    display: none;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 1401px) and (max-width: 5000px) {
+  .fix-width{
+      width: 1290px;
+  }
+  .cards{
+      grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+
+  .show-1{
+    display: none;
+  }
+  .show-2{
+    display: none;
+  }
+  .show-3{
+    display: none;
+  }
 }

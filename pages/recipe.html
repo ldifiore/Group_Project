@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yum&yum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="/styles/config.css">
 
@@ -19,13 +20,26 @@
                         <a href="/index.html" class="yum-yum"><h1>yum&yum</h1></a>
                     </header>
     
-                    <nav>
+                    <nav class="hide-2">
                         <ul>
                             <li><a href="/pages/lastestRecipes.html">Recipes</a></li>
                             <li><a href="/pages/video.html">Videos</a></li>
                             <li><a href="#recipe-footer">About us</a></li>
                         </ul>
                     </nav>
+                    <div class="topnav show-2">
+                        <a href="#home" class="active"></a>
+                        <!-- Navigation links (hidden by default) -->
+                        <div id="myLinks">
+                          <a href="/pages/lastestRecipes.html"><h4>Recipes</h4></a>
+                          <a href="/pages/video.html"><h4>Videos</h4></a>
+                          <a href="#home-footer"><h4>About us</h4></a>
+                        </div>
+                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="burger-icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +54,8 @@
                                     <h3>
                                         Pumpkin pie
                                     </h3>
-                                    <div class="socials">
+                                    <p class="show-2">As you pour the first glass of your favorite Chianti or Chardonnay</p>
+                                    <div class="socials recipe-icons">
                                         <div class="recipe-info">
                                             <i class="fa-brands fa-square-facebook"></i>
                                             <label><strong>Easy</strong>recipe</label>
@@ -54,9 +69,9 @@
                                             <label><strong>1</strong>hour</label>
                                         </div>
                                     </div>
-                                    <p>
-                                        Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
-                                        The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.
+                                    <p class="hide-2">Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. 
+                                        The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during 
+                                        the fall and early winter.
                                     </p>
                                     
                                 </div>
@@ -66,7 +81,6 @@
 
                         </div>
                     </div>
-                </div>
                 
 
                 <div class="content-wrapper" id="recipe-recipe">
@@ -189,16 +203,16 @@
                 <div class="content-wrapper footer-wrapper" id="recipe-footer">
                     <div class="center">
                         <div class="content footer-content">
-                            <h5>Come and join us for more recipes</h5>
+                            <h4>Come and join us for more recipes</h4>
                             <div class="socials">
                                 <div class="icon">
-                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                    <img src="/img/facebook.png" alt="facebook logo" width="18" height="18">
                                 </div>
                                 <div class="icon">
-                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                    <img src="/img/twitter.png" alt="twitter logo" width="22" height="16">
                                 </div>
                                 <div class="icon">
-                                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                                    <img src="/img/youtube.png" alt="youtube logo" width="22" height="16">
                                 </div>
                             </div>
                             <div class="yamyam">
@@ -207,8 +221,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>            
         </main>
     </body>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+              x.style.display = "none";
+            } else {
+              x.style.display = "block";
+            }
+          }
+        </script>
 </html>
